@@ -2,7 +2,7 @@
   <div class="panel-heading">Create User
     <?= $this->Html->link(
       "<<Back",
-      "/users/index",
+      "/users/home",
       [
         "class" => "btn btn-info pull-right",
         "style" => "margin-top:-6px"

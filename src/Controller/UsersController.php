@@ -7,6 +7,7 @@
     public function initialize(){
       parent::initialize();
       $this->loadModel("Users");
+      //$this->loadModel("Archives");
       $this->viewBuilder()->setLayout("layout");
     }
 
@@ -75,6 +76,10 @@
 
   public function logout(){
     return $this->redirect($this->Auth->logout());
+  }
+
+  public function home(){
+    $this->set("title", "Home");
   }
 
 }

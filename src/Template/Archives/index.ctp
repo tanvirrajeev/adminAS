@@ -1,6 +1,6 @@
 <div class="row">
   <div class="panel panel-primary">
-    <div class="panel-heading">User List
+    <div class="panel-heading">Archive List
 
       <?= $this->Html->link(
         "<<Back",
@@ -16,35 +16,38 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Username</th>
-            <th>Password</th>
-            <th>Create Date</th>
-            <th>Modified Date</th>
+            <th>File Name</th>
+            <th>Rack</th>
+            <th>Location</th>
+            <th>Item</th>
+            <th>Item Desp</th>
+            <th>Division</th>
+            <th>Responsible</th>
           </tr>
         </thead>
-        <?php foreach ($user as $value): ?>
+        <?php foreach ($archive as $value): ?>
           <tbody>
           <tr>
-            <td><?php echo $value->name."<br/>"; ?></td>
-            <td><?php echo $value->email."<br/>"; ?></td>
-            <td><?php echo $value->username."<br/>"; ?></td>
-            <td><?php echo $value->password."<br/>"; ?></td>
-            <td><?php echo $value->created."<br/>"; ?></td>
-            <td><?php echo $value->modified."<br/>"; ?></td>
+            <td><?php echo $value->file."<br/>"; ?></td>
+            <td><?php echo $value->rack."<br/>"; ?></td>
+            <td><?php echo $value->location."<br/>"; ?></td>
+            <td><?php echo $value->item."<br/>"; ?></td>
+            <td><?php echo $value->itemdesp."<br/>"; ?></td>
+            <td><?php echo $value->department."<br/>"; ?></td>
+            <td><?php echo $value->division."<br/>"; ?></td>
+            <td><?php echo $value->responsible."<br/>"; ?></td>
             <td>
               <?php
                 echo $this->Html->link(
                   "Edit",
-                  "/users/edit/".$value->id,
+                  "/archives/edit/".$value->id,
                   [
                     "class"=>"btn btn-info"
                   ]
                 );
                 echo $this->Html->link(
                   "Delete",
-                  "/users/delete/".$value->id,
+                  "/archives/delete/".$value->id,
                   [
                     "class"=>"btn btn-danger",
                     "style"=>"margin-left:5px;"
