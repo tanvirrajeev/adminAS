@@ -2,14 +2,6 @@
   <div class="panel panel-primary">
     <div class="panel-heading">User List
       <?php echo $this->Html->link(
-        "Logout",
-        "/users/logout",
-        [
-          "class"=>"btn btn-warning pull-right",
-          "style"=>"margin-top:-8px;"
-        ]
-      ); ?>
-      <?php echo $this->Html->link(
         "+ Create User",
         "/users/create",
         [
@@ -46,7 +38,7 @@
                   "Edit",
                   "/users/edit/".$value->id,
                   [
-                    "class"=>"btn btn-info"
+                    "class"=>"btn btn-warning"
                   ]
                 );
                 echo $this->Html->link(

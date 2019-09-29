@@ -54,15 +54,18 @@ class AppController extends Controller
 
         //Login
         $this->loadComponent('Auth', [
-            'loginRedirect' => [
-                'controller' => 'Users',
-                'action' => 'index'
-            ],
-            'logoutRedirect' => [
-                'controller' => 'Pages',
-                'action' => 'display',
-                'home'
+        'loginAction' => [
+            'controller' => 'Users',
+            'action' => 'login'
+        ],
+        'authError' => 'Username or Password Incrrect',
+        'authenticate' => [
+            'Form' => [
+                'fields' => ['username' => 'username']
             ]
-        ]);
+        ],
+        'storage' => 'Session'
+    ]);
+
     }
 }
