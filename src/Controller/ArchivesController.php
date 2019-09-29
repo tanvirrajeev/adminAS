@@ -14,6 +14,12 @@
       $archive = $this->Archives->find()->toArray();
       //print_r($archive);
       $this->set("archive", $archive);
+      $keyword = $this->request->query("keyword");
+      if(!empty($keyword)){
+        $this->Archives = [
+          "conditions"=>["file"=>$keyword]
+        ];
+      }
     }
 
     public function edit($id){

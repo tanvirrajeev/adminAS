@@ -10,6 +10,24 @@
           "style" => "margin-top:-6px"
         ]
       ); ?>
+      <?php
+        echo $this->Html->link(
+          "Search",
+          "/archives/index/",
+          [
+            "class"=>"btn btn-info pull-right",
+            "style"=>"margin-right:35px;"
+          ]
+        );
+
+        echo $this->Form->create("",["type"=>"get"]);
+        echo $this->Form->control("keyword", ["class"=>"pull-right"]);
+
+
+
+        echo $this->Form->end();
+      ?>
+
     </div>
     <div class="panel-body">
 
