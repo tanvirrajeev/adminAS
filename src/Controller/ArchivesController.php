@@ -68,5 +68,12 @@
       $this->redirect(["action"=>"index"]);
     }
 
+    public function view($id){
+      $this->set("title", "View");
+      $archive = $this->Archives->get($id);
+      $this->set("archive", $archive);
+    }
+
+
   }
  ?>

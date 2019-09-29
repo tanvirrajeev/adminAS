@@ -21,6 +21,7 @@
             <th>Location</th>
             <th>Item</th>
             <th>Item Desp</th>
+            <th>Department</th>
             <th>Division</th>
             <th>Responsible</th>
           </tr>
@@ -38,11 +39,19 @@
             <td><?php echo $value->responsible."<br/>"; ?></td>
             <td>
               <?php
+              echo $this->Html->link(
+                "View",
+                "/archives/view/".$value->id,
+                [
+                  "class"=>"btn btn-info"
+                ]
+              );
                 echo $this->Html->link(
                   "Edit",
                   "/archives/edit/".$value->id,
                   [
-                    "class"=>"btn btn-info"
+                    "class"=>"btn btn-info",
+                    "style"=>"margin-left:5px;"
                   ]
                 );
                 echo $this->Html->link(
